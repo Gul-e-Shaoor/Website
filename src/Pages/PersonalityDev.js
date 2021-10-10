@@ -18,9 +18,7 @@ const PersonalityDev = () => {
             className="text-light fs-4 text-center fw-light "
             style={{ margin: "0 10%" }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-            voluptatibus! Voluptas aspernatur praesentium tempore est
-            voluptatibus numquam, facere enim aut?
+            Your personality speaks for you like nothing else. Here, we shall groom your personality, teach you soft skills and help you boost your confidence. You shall face the world with a new and unique approach.
           </div>
         </div>
         <div></div>
