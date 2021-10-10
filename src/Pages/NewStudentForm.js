@@ -192,6 +192,7 @@ const NewStudentForm = (props) => {
         <h1 className="text-center">Profile Data</h1>
         <div className="row">
           <div className="col m-3">
+            <label className="fw-bold h5">Name</label>
             <input
               type="text"
               className="form-control"
@@ -202,6 +203,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">Age</label>
             <input
               type="number"
               className="form-control"
@@ -214,6 +216,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div className="col m-3">
+            <label className="fw-bold h5">Phone Number</label>
             <input
               type="text"
               className="form-control"
@@ -224,6 +227,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div className="col m-3">
+            <label className="fw-bold h5">Number of Siblings</label>
             <input
               type="number"
               class="form-control"
@@ -236,6 +240,7 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
+            <label className="fw-bold h5">Mother's Phone Number</label>
             <input
               type="text"
               class="form-control"
@@ -246,6 +251,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">Father's Phone Number</label>
             <input
               type="text"
               class="form-control"
@@ -258,16 +264,7 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Mothers Profession"
-              aria-label="Mothers Profession"
-              onChange={mothersJobChangeHandler}
-              required
-            />
-          </div>
-          <div class="col m-3">
+            <label className="fw-bold h5">Father's Profession</label>
             <input
               type="text"
               class="form-control"
@@ -277,9 +274,21 @@ const NewStudentForm = (props) => {
               required
             />
           </div>
+          <div class="col m-3">
+            <label className="fw-bold h5">Mother's Profession</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Mothers Profession"
+              aria-label="Mothers Profession"
+              onChange={mothersJobChangeHandler}
+              required
+            />
+          </div>
         </div>
         <div class="row">
           <div class="col m-3">
+            <label className="fw-bold h5">Order of Birth</label>
             <input
               type="number"
               class="form-control"
@@ -290,6 +299,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">Educational Background</label>
             <select
               class="form-select"
               aria-label=""
@@ -304,6 +314,7 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
+            <label className="fw-bold h5">Matriculation Percentage</label>
             <input
               type="number"
               class="form-control"
@@ -314,6 +325,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">FSc. Percentage</label>
             <input
               type="number"
               class="form-control"
@@ -326,6 +338,7 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
+            <label className="fw-bold h5">Recent Degree Year</label>
             <input
               type="number"
               class="form-control"
@@ -336,6 +349,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">Guardian Salary</label>
             <input
               type="number"
               class="form-control"
@@ -348,6 +362,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col m-3">
+            <label className="fw-bold h5">Address 1</label>
             <input
               type="text"
               class="form-control"
@@ -358,6 +373,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">Address 2</label>
             <input
               type="text"
               class="form-control"
@@ -370,6 +386,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col-md-5 m-3">
+            <label className="fw-bold h5">City</label>
             <input
               ref={cityRef}
               type="text"
@@ -381,6 +398,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col-md-4 m-3">
+            <label className="fw-bold h5">State</label>
             <select
               ref={stateRef}
               id="inputState"
@@ -398,6 +416,7 @@ const NewStudentForm = (props) => {
             </select>
           </div>
           <div class="col-md-2 m-3">
+            <label className="fw-bold h5">ZIP</label>
             <input
               ref={zipRef}
               type="text"
@@ -411,6 +430,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col m-3">
+            <label className="fw-bold h5">1st Year Percentage</label>
             <input
               type="number"
               class="form-control"
@@ -421,6 +441,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label className="fw-bold h5">9th Percentage</label>
             <input
               type="number"
               class="form-control"

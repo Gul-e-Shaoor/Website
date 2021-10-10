@@ -15,7 +15,7 @@ const Hero = () => {
                     to="/careers"
                     className={`${styles.btnText} btn btn-outline-light mx-2 my-4 flex-grow-1`}
                   >
-                    <i className="fa fa-graduation-cap mx-2"></i> Careers 
+                    <i className="fa fa-graduation-cap mx-2"></i> Careers
                   </Link>
                   <Link
                     to="/auth"
