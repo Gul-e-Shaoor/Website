@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from "react";
-import { useHistory } from "react-router";
+//import { useHistory } from "react-router";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
 
@@ -35,7 +35,7 @@ const NewStudentForm = (props) => {
     state: "",
     zip: "",
   });
-  const history = useHistory();
+ // const history = useHistory();
   const authCtx = useContext(AuthContext);
   const email = authCtx.email;
   const formSubmitHandler = (e) => {

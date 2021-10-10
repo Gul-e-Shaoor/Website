@@ -6,6 +6,7 @@ const Twitter = (props) => {
       viewBox="0 0 512 512"
       width={props.width}
       length={props.height}
+      // eslint-disable-next-line react/jsx-no-duplicate-props
       className="logo-div"
     >
       <title>Logo Twitter</title>

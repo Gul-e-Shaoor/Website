@@ -7,6 +7,7 @@ const Instagram = (props) => {
       width={props.width}
       length={props.height}
       fill="#e5e5e5"
+      // eslint-disable-next-line react/jsx-no-duplicate-props
       className="logo-div"
     >
       <title>Logo Instagram</title>

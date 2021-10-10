@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
-import styles from "../Styles/Hero.module.css";
+// import { Link } from "react-router-dom";
+// import styles from "../Styles/Hero.module.css";
 import "./About.css"
 const About = () => {
     return ( 
