@@ -212,17 +212,6 @@ const RegistrationForm = () => {
             <div className={styles.radioContainer}>
               <div>
                 <input
-                  type="radio"
-                  value="Mentor/Counselor"
-                  onChange={typeChangeHandler}
-                  className={styles.test}
-                  name="type"
-                  required
-                ></input>
-                <label className={styles.selectLabel}>Mentor/Counselor</label>
-              </div>
-              <div>
-                <input
                   onChange={typeChangeHandler}
                   type="radio"
                   value="Student"
@@ -231,6 +220,17 @@ const RegistrationForm = () => {
                   required
                 ></input>
                 <label className={styles.selectLabel}>Student</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  value="Mentor/Counselor"
+                  onChange={typeChangeHandler}
+                  className={styles.test}
+                  name="type"
+                  required
+                ></input>
+                <label className={styles.selectLabel}>Mentor/Counselor</label>
               </div>
             </div>
             <button

@@ -65,10 +65,7 @@ const Entertainment = () => {
         <div className="h-100 d-flex flex-column justify-content-center align-items-center">
           <div className="display-2 text-center">Entertainment</div>
           <div className="text-center py-5" style={{ width: "50%" }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-            voluptatem tempore sint consequatur nostrum minima corrupti. Eius
-            totam autem tempore mollitia fuga repellendus, sunt, cupiditate
-            officia nulla nam, illo maxime.
+            We believe in "All work and no play makes Jack a dull boy". At our platform, you'll get entertainment along with mentorship, and that way you'll never lose interest.
           </div>
         </div>
       </div>

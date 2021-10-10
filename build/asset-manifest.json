@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/Website/static/css/main.99687631.chunk.css",
+    "main.js": "/Website/static/js/main.60d81357.chunk.js",
+    "main.js.map": "/Website/static/js/main.60d81357.chunk.js.map",
+    "runtime-main.js": "/Website/static/js/runtime-main.39e9fe2f.js",
+    "runtime-main.js.map": "/Website/static/js/runtime-main.39e9fe2f.js.map",
+    "static/js/2.4413d2ac.chunk.js": "/Website/static/js/2.4413d2ac.chunk.js",
+    "static/js/2.4413d2ac.chunk.js.map": "/Website/static/js/2.4413d2ac.chunk.js.map",
+    "static/js/3.15bfad26.chunk.js": "/Website/static/js/3.15bfad26.chunk.js",
+    "static/js/3.15bfad26.chunk.js.map": "/Website/static/js/3.15bfad26.chunk.js.map",
+    "index.html": "/Website/index.html",
+    "static/css/main.99687631.chunk.css.map": "/Website/static/css/main.99687631.chunk.css.map",
+    "static/js/2.4413d2ac.chunk.js.LICENSE.txt": "/Website/static/js/2.4413d2ac.chunk.js.LICENSE.txt",
+    "static/media/Entertainment.module.css": "/Website/static/media/Books.b83a92e6.jpg",
+    "static/media/MntrProfGrid.module.css": "/Website/static/media/mentor.29831e4a.jpg",
+    "static/media/Logo_1.svg": "/Website/static/media/Logo_1.475e38b7.svg",
+    "static/media/ambassador.87ead65b.jpg": "/Website/static/media/ambassador.87ead65b.jpg",
+    "static/media/App.css": "/Website/static/media/mentorship-header-image.d5ea08ca.jpg",
+    "static/media/careerCounsellor.ac16d46e.jpg": "/Website/static/media/careerCounsellor.ac16d46e.jpg",
+    "static/media/collab.6264f624.jpg": "/Website/static/media/collab.6264f624.jpg",
+    "static/media/counselling.jpg": "/Website/static/media/counselling.76ef6a87.jpg",
+    "static/media/entertainment.jpg": "/Website/static/media/entertainment.f2cf0633.jpg",
+    "static/media/final_copy.svg": "/Website/static/media/final_copy.8bd80924.svg",
+    "static/media/financeDirector.c436543a.webp": "/Website/static/media/financeDirector.c436543a.webp",
+    "static/media/MentorProfile.css": "/Website/static/media/mentor-back.020a17a8.jpg",
+    "static/media/mentorship.jpg": "/Website/static/media/mentorship.8a24cade.jpg",
+    "static/media/opportunity.jpg": "/Website/static/media/opportunity.61fc6b8a.jpg",
+    "static/media/PersonalityDev.module.css": "/Website/static/media/personalityDev.5d642ef7.jpg",
+    "static/media/phsycologists.7f31e651.jpg": "/Website/static/media/phsycologists.7f31e651.jpg",
+    "static/media/socialMediaManager.07c9b73c.jpg": "/Website/static/media/socialMediaManager.07c9b73c.jpg",
+    "static/media/StudentProfile.css": "/Website/static/media/student-back.8ca90014.jpg",
+    "static/media/support.jpg": "/Website/static/media/support.6da4eb90.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39e9fe2f.js",
+    "static/js/2.4413d2ac.chunk.js",
+    "static/css/main.99687631.chunk.css",
+    "static/js/main.60d81357.chunk.js"
+  ]
+}

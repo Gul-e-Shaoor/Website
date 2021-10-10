@@ -192,6 +192,7 @@ const NewStudentForm = (props) => {
         <h1 className="text-center">Profile Data</h1>
         <div className="row">
           <div className="col m-3">
+          <label>Name</label>
             <input
               type="text"
               className="form-control"
@@ -202,6 +203,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label>Age</label>
             <input
               type="number"
               className="form-control"
@@ -214,6 +216,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div className="col m-3">
+          <label>Phone Number</label>
             <input
               type="text"
               className="form-control"
@@ -224,6 +227,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div className="col m-3">
+          <label>Number of Siblings</label>
             <input
               type="number"
               class="form-control"
@@ -235,17 +239,8 @@ const NewStudentForm = (props) => {
           </div>
         </div>
         <div class="row">
-          <div class="col m-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Mothers Phone Number"
-              aria-label="Mothers Phone Number"
-              onChange={motherPhoneChangeHandler}
-              required
-            />
-          </div>
-          <div class="col m-3">
+        <div class="col m-3">
+          <label>Father Phone Number</label>
             <input
               type="text"
               class="form-control"
@@ -255,19 +250,23 @@ const NewStudentForm = (props) => {
               required
             />
           </div>
-        </div>
-        <div class="row">
           <div class="col m-3">
+            
+          <label>Mother Phone Number</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Mothers Profession"
-              aria-label="Mothers Profession"
-              onChange={mothersJobChangeHandler}
+              placeholder="Mothers Phone Number"
+              aria-label="Mothers Phone Number"
+              onChange={motherPhoneChangeHandler}
               required
             />
           </div>
-          <div class="col m-3">
+          
+        </div>
+        <div class="row">
+        <div class="col m-3">
+          <label>Father Profession</label>
             <input
               type="text"
               class="form-control"
@@ -277,9 +276,22 @@ const NewStudentForm = (props) => {
               required
             />
           </div>
+          <div class="col m-3">
+          <label>Mother Profession</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Mothers Profession"
+              aria-label="Mothers Profession"
+              onChange={mothersJobChangeHandler}
+              required
+            />
+          </div>
+          
         </div>
         <div class="row">
           <div class="col m-3">
+          <label>Order Of Birth</label>
             <input
               type="number"
               class="form-control"
@@ -290,6 +302,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+          <label>Educational Background</label>
             <select
               class="form-select"
               aria-label=""
@@ -304,28 +317,31 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
+            <label>Matriculation Percentage</label>
             <input
               type="number"
               class="form-control"
               placeholder="Matriculation Percentage"
               aria-label=""
               onChange={matricChangeHandler}
-              required
+              
             />
           </div>
           <div class="col m-3">
+          <label>FSC Percentage</label>
             <input
               type="number"
               class="form-control"
               placeholder="FSc. Percentage"
               aria-label=""
               onChange={fscChangeHandler}
-              required
+              
             />
           </div>
         </div>
         <div class="row">
           <div class="col m-3">
+          <label>Recent Degree Year</label>
             <input
               type="number"
               class="form-control"
@@ -336,6 +352,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+            <label>Guardian Salary</label>
             <input
               type="number"
               class="form-control"
@@ -348,20 +365,22 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col m-3">
+            <label>Address</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Adress 1"
+              placeholder="Address 1"
               aria-label=""
               onChange={street1ChangeHandler}
               required
             />
           </div>
           <div class="col m-3">
+          <label>Address</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Adress 2"
+              placeholder="Address 2"
               aria-label=""
               onChange={street2ChangeHandler}
               required
@@ -370,6 +389,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col-md-5 m-3">
+          <label>City</label>
             <input
               ref={cityRef}
               type="text"
@@ -381,6 +401,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col-md-4 m-3">
+          <label>Start</label>
             <select
               ref={stateRef}
               id="inputState"
@@ -398,6 +419,7 @@ const NewStudentForm = (props) => {
             </select>
           </div>
           <div class="col-md-2 m-3">
+          <label>Zip Code</label>
             <input
               ref={zipRef}
               type="text"
@@ -411,6 +433,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col m-3">
+          <label>1st Year Percentage</label>
             <input
               type="number"
               class="form-control"
@@ -421,6 +444,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
+          <label>9th Percentage</label>
             <input
               type="number"
               class="form-control"

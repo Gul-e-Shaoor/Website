@@ -59,7 +59,7 @@ const App = () => {
             <MentorProfile />
           </Route>
         )}
-        {type == "Student" && (
+        {type === "Student" && (
           <Route path="/profile">
             <StudentProfile />
           </Route>
