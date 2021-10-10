@@ -29,57 +29,57 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route path="%PUBLIC_URL%/" exact>
+        <Route path="/" exact>
           <div style={{ fontFamily: "Lato", marginTop: "80px" }}>
             <Home />
           </div>
         </Route>
-        <Route path="%PUBLIC_URL%/auth">
+        <Route path="/auth">
           <Auth />
         </Route>
-        <Route path="%PUBLIC_URL%/careers" exact>
+        <Route path="/careers" exact>
           <Pictures />
         </Route>
-        <Route path="%PUBLIC_URL%/collaboration">
+        <Route path="/collaboration">
           <Collaboration />
         </Route>
-        <Route path="%PUBLIC_URL%/services">
+        <Route path="/services">
           <Services />
         </Route>
-        <Route path="%PUBLIC_URL%/personalitydev">
+        <Route path="/personalitydev">
           <PersonalityDev />
         </Route>
         {type === "Mentor/Counselor" && (
-          <Route path="%PUBLIC_URL%/profile">
+          <Route path="/profile">
             <MentorProfile />
           </Route>
         )}
         {type === "Student" && (
-          <Route path="%PUBLIC_URL%/profile">
+          <Route path="/profile">
             <StudentProfile />
           </Route>
         )}
-        <Route path="%PUBLIC_URL%/careers/:carId" exact>
+        <Route path="/careers/:carId" exact>
           <CareerReg />
         </Route>
-        <Route path="%PUBLIC_URL%/careerCounselling">
+        <Route path="/careerCounselling">
           <CareerCounselling />
         </Route>
-        <Route path="%PUBLIC_URL%/mentorship">
+        <Route path="/mentorship">
           <Mentorship />
         </Route>
-        <Route path="%PUBLIC_URL%/entertainment">
+        <Route path="/entertainment">
           <Entertainment />
         </Route>
-        <Route path="%PUBLIC_URL%/mentorProfilePage">
+        <Route path="/mentorProfilePage">
           <ProfilePage />
         </Route>
-        <Route path="%PUBLIC_URL%/CareerProfilePage">
+        <Route path="/CareerProfilePage">
           <CareerProfilePage />
         </Route>
 
         {isLoggedin && type === "Student" && (
-          <Route path="%PUBLIC_URL%/newRegis">
+          <Route path="/newRegis">
             <RegisWalker />
           </Route>
         )}
