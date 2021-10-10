@@ -18,7 +18,7 @@ const Footer = () => {
     <div className="footer-center col-md-4 col-sm-6">
       <div>
         <i className="fa fa-map-marker"></i>
-        <p><span> Street name and number</span> City, Country</p>
+        <p>Islamabad, Pakistan</p>
       </div>
       <div>
         <i className="fa fa-phone"></i>
@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
     </div>
     <div className="footer-right col-md-4 col-sm-6">
-      <h2> Company<span> logo</span></h2>
+      <h2> Gul-e-Shaor </h2>
       <p className="menu">
        <Link to ="/"> Home</Link> |
         <Link to="/about"> About</Link> |
