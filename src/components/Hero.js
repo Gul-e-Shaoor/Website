@@ -32,9 +32,7 @@ const Hero = () => {
                     className="fs-6 text-light py-3 "
                     style={{ opacity: "0.8" }}
                   >
-                    GuleShaoor nurtures youth and maximizes its potential by
-                    providing mentorship, counselling and networks for their
-                    personal as well as career development.
+                   We nurture young minds towards a productive approach and build their capacity for career development over international standards by fulfilling their need of counselling, mentorship, information, healthy entertainment and a supporting community.
                   </p>
                 </div>
               </div>

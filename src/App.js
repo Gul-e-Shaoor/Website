@@ -15,6 +15,8 @@ import PersonalityDev from "./Pages/PersonalityDev";
 import CareerCounselling from "./Pages/CareerCounselling";
 import CareerReg from "./Pages/CareerReg";
 import Mentorship from "./Pages/Mentorship";
+import Footer from "./components/Footer";
+import About from "./Pages/About";
 //import StudentProfile from "./Pages/StudentProfile";
 //import CareerReg from "./Pages/CareerReg";
 import Entertainment from "./Pages/Entertainment";
@@ -46,6 +48,9 @@ const App = () => {
         <Route path="/services">
           <Services />
         </Route>
+        <Route path="/about">
+          <About />
+          </Route>
         <Route path="/personalitydev">
           <PersonalityDev />
         </Route>
@@ -84,6 +89,7 @@ const App = () => {
           </Route>
         )}
       </Switch>
+      <Footer />
     </Router>
   );
 };
