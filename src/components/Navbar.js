@@ -41,7 +41,7 @@ const Navbar = () => {
 
             <Link to="/services">Services</Link>
 
-            <a href="#about">About</a>
+          <Link to ="/about">About</Link>
 
             {!isLoggedIn && <Link to="/auth">Log in</Link>}
 
