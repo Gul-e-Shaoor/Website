@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 const Facebook = (props) => {
   return (
     <svg

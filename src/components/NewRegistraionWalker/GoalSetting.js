@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useHistory } from "react-router";
+//import { useHistory } from "react-router";
 import { useState } from "react/cjs/react.development";
 import { getObjId } from "../../Pages/NewStudentForm";
 import AuthContext from "../../Store/Auth-Context";
@@ -11,7 +11,7 @@ const GoalSetting = (props) => {
   const [answer4, setanswer4] = useState("");
   const [answer5, setanswer5] = useState("");
   const [answer6, setanswer6] = useState("");
-  const history = useHistory();
+ // const history = useHistory();
   const authCtx = useContext(AuthContext);
   const email = authCtx.email;
   const id = getObjId(email);

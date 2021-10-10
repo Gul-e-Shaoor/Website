@@ -6,9 +6,7 @@ import axios from "axios";
 const Entertainment = () => {
   const [book, setBook] = useState("");
   const [result, setresult] = useState([]);
-  const [apiKey, setApiKey] = useState(
-    "AIzaSyCcfI6rt6c3Tud2mesND-oDaCcAW-DarUM"
-  );
+  const [apiKey] = useState("AIzaSyCcfI6rt6c3Tud2mesND-oDaCcAW-DarUM");
   function handleChange(event) {
     const book = event.target.value;
     setBook(book);
@@ -47,7 +45,7 @@ const Entertainment = () => {
                 <a
                   className="nav-link"
                   href="https://medium.com/"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   Blogs
                 </a>
@@ -168,7 +166,7 @@ const Entertainment = () => {
                     <a
                       href={book.volumeInfo.previewLink}
                       target="_blank"
-                      className="text-center"
+                      className="text-center" rel="noreferrer"
                     >
                       <img
                         src={book.volumeInfo.imageLinks.thumbnail}
