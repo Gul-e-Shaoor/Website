@@ -40,15 +40,18 @@ const RegisWalker = () => {
     history.replace("/");
   };
   return (
-    <div>
-      <div style={{ marginTop: "100px", fontFamily: "Lato" }}>
-        <div className="row">
-          <div className="col-2 p-0 m-0">
-            <div className="" style={{ margin: "0 20px" }}>
+    <div style={{ height: "100vh" }}>
+      <div
+        style={{ marginTop: "84px", fontFamily: "Lato", overflowY: "hidden" }}
+        className="py-1 px-2"
+      >
+        <div className="row g-2">
+          <div className="col-md-4 col-lg-2 d-block py-2 m-0">
+            <div className="" style={{ margin: "0 0", height: "100%" }}>
               <SideBar appStat={applicationStatus} />
             </div>
           </div>
-          <div className="col-10">
+          <div className="col-md-8 col-lg-10 d-block">
             {!applicationStatus.personalDetailsStatus && (
               <NewStudentForm appMan={managePersonalDetailsStatus} />
             )}

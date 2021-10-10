@@ -9,7 +9,7 @@ const StudentProfile = () => {
   const meetings = ["Monday 7:00 - 8:00"];
   const sessHandler = () => {
     openPopupWidget({
-      url: `https://calendly.com/"idhar gule-shaoor ka email dalna hai"`,
+      url: `https://calendly.com/sessionviaguleshaoor`,
     });
   };
   return (

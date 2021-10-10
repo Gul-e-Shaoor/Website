@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from "react";
 import { useHistory } from "react-router";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
+import MuiPhoneNumber from "material-ui-phone-number";
 
 export const getObjId = async (email) => {
   const data = await fetch(
@@ -216,15 +217,33 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div className="col m-3">
-            <label className="fw-bold h5">Phone Number</label>
-            <input
+            <div className="d-flex flex-column">
+              <label className="fw-bold h5">Phone Number</label>
+              <MuiPhoneNumber
+                name="phone"
+                data-cy="user-phone"
+                defaultCountry="pk"
+                required
+                variant="outlined"
+                style={{
+                  background: "#FFFFFF",
+                  outline: "none",
+                  paddingTop: "0rem",
+                  paddingBottom: "0rem",
+                  border: "none",
+                  borderRadius: "0.5rem",
+                }}
+                className="text-light"
+              />
+            </div>
+            {/* <input
               type="text"
               className="form-control"
               placeholder="Phone Number"
               aria-label="phone number"
               onChange={phoneChangeHandler}
               required
-            />
+            /> */}
           </div>
           <div className="col m-3">
             <label className="fw-bold h5">Number of Siblings</label>

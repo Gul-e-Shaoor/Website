@@ -23,16 +23,13 @@ const Community = (props) => {
         className="text-center"
         style={{ marginTop: "-20px", paddingBottom: "20px" }}
       >
-        <button
-          className="btn btn-lg btn-outline-light "
-          style={{ marginRight: "15px" }}
-          onClick={clkHandler}
+        <a
+          href="https://www.facebook.com/groups/400723168283519/?ref=share"
+          className="btn btn-lg btn-outline-light"
+          target="_blank"
         >
-          Next
-        </button>
-        <button className="btn btn-lg btn-outline-light">
-          Join Facebook group
-        </button>
+          Join Community
+        </a>
       </div>
     </div>
   );

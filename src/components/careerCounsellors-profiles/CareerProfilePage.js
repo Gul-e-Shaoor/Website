@@ -2,7 +2,13 @@ import Contact from "./Contact";
 import Header from "./Header";
 import About from "./About";
 import { Link } from "react-router-dom";
+import { openPopupWidget } from "react-calendly";
 const ProfilePage = () => {
+  const ButtonHandler = () => {
+    openPopupWidget({
+      url: `https://calendly.com/sessionviaguleshaoor`,
+    });
+  };
   return (
     <div
       className="container p-5 mt-5"
@@ -23,51 +29,12 @@ const ProfilePage = () => {
           Back to Career Counselling Page
         </Link>
         <button
-          to="/careerCounselling"
           type="button"
           class="btn btn-outline-dark"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
+          onClick={ButtonHandler}
         >
-          Be My Career Counsellor
+           Be My Career Counsellor
         </button>
-      </div>
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div className="modal-title text-center">
-                <h3 className="">Get in Touch!</h3>
-              </div>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <Contact />
-            </div>
-            <div class="modal-footer ">
-              <button
-                type="button"
-                class="btn btn-secondary "
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
