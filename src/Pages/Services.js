@@ -10,21 +10,7 @@ const Services = () => {
         style={{ fontFamily: "Lato" }}
       >
         <div className="container py-5 ">
-          <div className="text-center">
-            <p className="mt-5">We have got your back for any problem you face regarding your careers and educational matters. GuleShaoor is here to help you equip with the best resources for your concerns. It bridges the gap between what youth demands and what is needed to fulfill the needs. </p>
-            <h2>
-            Our Community 
-            </h2>
-            <p>
-            Our community is far-reaching. It includes undergraduates/postgraduates and industrial professionals from different fields, together making it a whole for all the student and career concerns. You can not only connect with them individually but also share your concerns publically in the community to have valuable and logical suggestions from everyone. Wait no more, link up with this community now. 
-            </p>
-            <h2>
-            Have Concerns? 
-            </h2>
-            <p>
-            Your career choices are sorted but there are some other problems that are stopping to excel? No issues!  Whether it is money problem and you need funding or your parents do not support your choices GuleShaoor has a way out. Along with its profound community, it has linked up with multiple organizations that can help regarding the scholarships and funding. Fill the form writing about all your concerns and GuleShaoor will consult one-to-one to the respective expert that comes up with a solution for you. 
-            </p>
-          </div>
+         
           <div className="display-2 text-center">Our Services</div>
           <div className="row py-5 justify-content-center gx-3 gy-3">
             <div className="col-sm-6 col-md-4 col-lg-4 ">
