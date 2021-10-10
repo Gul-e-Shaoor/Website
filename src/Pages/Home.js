@@ -4,6 +4,7 @@ import Services from "../Pages/Services";
 import Header from "../components/Header";
 import Mentors from "../components/Mentors";
 import CareerCounsellors from "../components/CareerCounsellors";
+import Collaboration from "./Collaboration";
 const Home = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const Home = () => {
       <section className="bg-dark text-light">
         <CareerCounsellors />
       </section>
+      <Collaboration />
     </div>
   );
 };

@@ -22,6 +22,7 @@ import About from "./Pages/About";
 import Entertainment from "./Pages/Entertainment";
 import StudentProfile from "./Pages/StudentProfile";
 import RegisWalker from "./Pages/RegisWalker";
+import Support from "./components/Support";
 const App = () => {
   const authCtx = useContext(AuthContext);
   const type = authCtx.type;
@@ -50,7 +51,7 @@ const App = () => {
         </Route>
         <Route path="/about">
           <About />
-          </Route>
+        </Route>
         <Route path="/personalitydev">
           <PersonalityDev />
         </Route>
@@ -82,7 +83,9 @@ const App = () => {
         <Route path="/CareerProfilePage">
           <CareerProfilePage />
         </Route>
-
+        <Route path="/support">
+          <Support />
+        </Route>
         {isLoggedin && type === "Student" && (
           <Route path="/newRegis">
             <RegisWalker />

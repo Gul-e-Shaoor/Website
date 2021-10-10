@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
-//import { useHistory } from "react-router";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
+import MuiPhoneNumber from "material-ui-phone-number";
 
 export const getObjId = async (email) => {
   const data = await fetch(
@@ -16,7 +16,6 @@ const NewStudentForm = (props) => {
   const [street2, setStreet2] = useState("");
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   const [mothersContact, setMothersContact] = useState("");
   const [fathersContact, setFathersContact] = useState("");
   const [mothersJob, setMothersJob] = useState("");
@@ -35,7 +34,7 @@ const NewStudentForm = (props) => {
     state: "",
     zip: "",
   });
- // const history = useHistory();
+
   const authCtx = useContext(AuthContext);
   const email = authCtx.email;
   const formSubmitHandler = (e) => {
@@ -53,7 +52,6 @@ const NewStudentForm = (props) => {
         body: JSON.stringify({
           name,
           age,
-          phoneNumber,
           mothersContact,
           fathersContact,
           mothersJob,
@@ -92,10 +90,7 @@ const NewStudentForm = (props) => {
     const val = e.target.value;
     setAge(val);
   };
-  const phoneChangeHandler = (e) => {
-    const val = e.target.value;
-    setPhoneNumber(val);
-  };
+
   const motherPhoneChangeHandler = (e) => {
     const val = e.target.value;
     setMothersContact(val);
@@ -192,7 +187,7 @@ const NewStudentForm = (props) => {
         <h1 className="text-center">Profile Data</h1>
         <div className="row">
           <div className="col m-3">
-          <label>Name</label>
+            <label className="fw-bold h5">Name</label>
             <input
               type="text"
               className="form-control"
@@ -203,7 +198,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
-            <label>Age</label>
+            <label className="fw-bold h5">Age</label>
             <input
               type="number"
               className="form-control"
@@ -216,18 +211,36 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div className="col m-3">
-          <label>Phone Number</label>
-            <input
+            <div className="d-flex flex-column">
+              <label className="fw-bold h5">Phone Number</label>
+              <MuiPhoneNumber
+                name="phone"
+                data-cy="user-phone"
+                defaultCountry="pk"
+                required
+                variant="outlined"
+                style={{
+                  background: "#FFFFFF",
+                  outline: "none",
+                  paddingTop: "0rem",
+                  paddingBottom: "0rem",
+                  border: "none",
+                  borderRadius: "0.5rem",
+                }}
+                className="text-light"
+              />
+            </div>
+            {/* <input
               type="text"
               className="form-control"
               placeholder="Phone Number"
               aria-label="phone number"
               onChange={phoneChangeHandler}
               required
-            />
+            /> */}
           </div>
           <div className="col m-3">
-          <label>Number of Siblings</label>
+            <label className="fw-bold h5">Number of Siblings</label>
             <input
               type="number"
               class="form-control"
@@ -239,20 +252,8 @@ const NewStudentForm = (props) => {
           </div>
         </div>
         <div class="row">
-        <div class="col m-3">
-          <label>Father Phone Number</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Fathers Phone Number"
-              aria-label="Fathers Phone Number"
-              onChange={fathersPhoneChangeHandler}
-              required
-            />
-          </div>
           <div class="col m-3">
-            
-          <label>Mother Phone Number</label>
+            <label className="fw-bold h5">Mother's Phone Number</label>
             <input
               type="text"
               class="form-control"
@@ -262,11 +263,21 @@ const NewStudentForm = (props) => {
               required
             />
           </div>
-          
+          <div class="col m-3">
+            <label className="fw-bold h5">Father's Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Fathers Phone Number"
+              aria-label="Fathers Phone Number"
+              onChange={fathersPhoneChangeHandler}
+              required
+            />
+          </div>
         </div>
         <div class="row">
-        <div class="col m-3">
-          <label>Father Profession</label>
+          <div class="col m-3">
+            <label className="fw-bold h5">Father's Profession</label>
             <input
               type="text"
               class="form-control"
@@ -277,7 +288,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
-          <label>Mother Profession</label>
+            <label className="fw-bold h5">Mother's Profession</label>
             <input
               type="text"
               class="form-control"
@@ -287,11 +298,10 @@ const NewStudentForm = (props) => {
               required
             />
           </div>
-          
         </div>
         <div class="row">
           <div class="col m-3">
-          <label>Order Of Birth</label>
+            <label className="fw-bold h5">Order of Birth</label>
             <input
               type="number"
               class="form-control"
@@ -302,7 +312,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
-          <label>Educational Background</label>
+            <label className="fw-bold h5">Educational Background</label>
             <select
               class="form-select"
               aria-label=""
@@ -317,31 +327,31 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
-            <label>Matriculation Percentage</label>
+            <label className="fw-bold h5">Matriculation Percentage</label>
             <input
               type="number"
               class="form-control"
               placeholder="Matriculation Percentage"
               aria-label=""
               onChange={matricChangeHandler}
-              
+              required
             />
           </div>
           <div class="col m-3">
-          <label>FSC Percentage</label>
+            <label className="fw-bold h5">FSc. Percentage</label>
             <input
               type="number"
               class="form-control"
               placeholder="FSc. Percentage"
               aria-label=""
               onChange={fscChangeHandler}
-              
+              required
             />
           </div>
         </div>
         <div class="row">
           <div class="col m-3">
-          <label>Recent Degree Year</label>
+            <label className="fw-bold h5">Recent Degree Year</label>
             <input
               type="number"
               class="form-control"
@@ -352,7 +362,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
-            <label>Guardian Salary</label>
+            <label className="fw-bold h5">Guardian Salary</label>
             <input
               type="number"
               class="form-control"
@@ -365,22 +375,22 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col m-3">
-            <label>Address</label>
+            <label className="fw-bold h5">Address 1</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Address 1"
+              placeholder="Adress 1"
               aria-label=""
               onChange={street1ChangeHandler}
               required
             />
           </div>
           <div class="col m-3">
-          <label>Address</label>
+            <label className="fw-bold h5">Address 2</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Address 2"
+              placeholder="Adress 2"
               aria-label=""
               onChange={street2ChangeHandler}
               required
@@ -389,7 +399,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col-md-5 m-3">
-          <label>City</label>
+            <label className="fw-bold h5">City</label>
             <input
               ref={cityRef}
               type="text"
@@ -401,7 +411,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col-md-4 m-3">
-          <label>Start</label>
+            <label className="fw-bold h5">State</label>
             <select
               ref={stateRef}
               id="inputState"
@@ -419,7 +429,7 @@ const NewStudentForm = (props) => {
             </select>
           </div>
           <div class="col-md-2 m-3">
-          <label>Zip Code</label>
+            <label className="fw-bold h5">ZIP</label>
             <input
               ref={zipRef}
               type="text"
@@ -433,7 +443,7 @@ const NewStudentForm = (props) => {
         </div>
         <div className="row">
           <div class="col m-3">
-          <label>1st Year Percentage</label>
+            <label className="fw-bold h5">1st Year Percentage</label>
             <input
               type="number"
               class="form-control"
@@ -444,7 +454,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
-          <label>9th Percentage</label>
+            <label className="fw-bold h5">9th Percentage</label>
             <input
               type="number"
               class="form-control"
