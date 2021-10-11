@@ -5,9 +5,9 @@ const PersonalityDev = () => {
   return (
     <section
       className="text-light mt-5"
-      style={{ height: "100vh", fontFamily: "Lato" }}
+      style={{ fontFamily: "Lato" }}
     >
-      <div className={`${styles.back} h-100`}>
+      <div className={`${styles.back} h-200`}>
         <div
           className={`${styles.backOverlay} d-flex flex-column justify-content-center align-content-center h-100`}
         >
