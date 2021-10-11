@@ -5,7 +5,7 @@ import Linkedin from "../SVGS/Linkedin";
 import { useState } from "react";
 import "./CollabForm.css";
 import { fetchAndCompareEmail } from "../Utils/fetchers";
-import { useRef } from "react/cjs/react.development";
+import { useRef } from "react";
 const CollabForm = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPhone, setEnteredPhone] = useState("");

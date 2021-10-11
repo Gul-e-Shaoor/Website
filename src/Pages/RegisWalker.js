@@ -1,5 +1,5 @@
 import { useHistory } from "react-router";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import Community from "../components/NewRegistraionWalker/Community";
 import GoalSetting from "../components/NewRegistraionWalker/GoalSetting";
 import SideBar from "../components/NewRegistraionWalker/SideBar";

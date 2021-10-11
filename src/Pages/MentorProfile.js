@@ -1,4 +1,4 @@
-import { Fragment } from "react/cjs/react.development";
+import { Fragment } from "react";
 import img from "../Images/mentor.jpg";
 import "./MentorProfile.css";
 const MentorProfile = () => {

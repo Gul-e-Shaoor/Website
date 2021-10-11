@@ -19,6 +19,7 @@ const Hero = () => {
                   </Link>
                   <Link
                     to="/auth"
+                    // eslint-disable-next-line no-sequences
                     className={`${styles.btnText,styles.regiter_btn} btn btn-primary mx-2 my-4 flex-grow-1`}
                   >
                     <i className="fa fa-sign-in mx-2"></i> Register

@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { useState } from "react/cjs/react.development";
+import { useRef,useState } from "react";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { initializeApp } from "@firebase/app";
 const CareerForm = () => {
