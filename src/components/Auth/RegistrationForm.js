@@ -235,7 +235,7 @@ const RegistrationForm = () => {
             </div>
             <button
               type={"submit"}
-              className="btn btn-primary btn-lg btn-block text-white mt-4"
+              className={`${styles.butn} btn btn-primary btn-lg btn-block mt-4`}
             >
               Create Account
             </button>

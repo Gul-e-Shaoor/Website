@@ -1,9 +1,20 @@
 .btnText {
   font-size: clamp(0.5rem, 2.5vh, 4rem);
+  
 }
 
 @media screen and (max-width: 500px) {
   .btnText {
     font-size: clamp(0.5rem, 1.5vh, 4rem);
+
   }
+}
+.regiter_btn{
+  color:  #F96209;
+  background-color: #FFC30B;
+  border: none;
+
+}
+.regiter_btn:hover{
+  background-color: #fccc3b;
 }

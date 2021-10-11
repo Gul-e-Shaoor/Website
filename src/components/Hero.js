@@ -19,7 +19,7 @@ const Hero = () => {
                   </Link>
                   <Link
                     to="/auth"
-                    className={`${styles.btnText} btn btn-primary mx-2 my-4 flex-grow-1`}
+                    className={`${styles.btnText,styles.regiter_btn} btn btn-primary mx-2 my-4 flex-grow-1`}
                   >
                     <i className="fa fa-sign-in mx-2"></i> Register
                   </Link>

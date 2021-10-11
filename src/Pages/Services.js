@@ -86,9 +86,7 @@ const Services = () => {
                 />
                 <div className="card-body text-center">
                   <div className="card-text my-2">
-                    Our system shall prove an interactive platform where you
-                    will get to collaborate with teachers, mentors and students
-                    like yourself.
+                  We have a good package for your support in form of a community as well as Consultation portal for other issues as well. Check now!.
                   </div>
                   <Link to="/support" className="btn btn-outline-dark my-3">
                     Support

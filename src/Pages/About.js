@@ -10,8 +10,11 @@ const About = () => {
         <div className="container">
           <div className="d-grid">
             <div className="row justify-content-between">
-              <div className="col-sm-12 col-lg-2 d-flex flex-column ">
-             
+              <div className="col-sm-12 col-lg-6 d-flex flex-column ">
+                <div className="about">
+             <h1>About</h1>
+             <p>GuleShaoor is a digital social enterprise model built to develop secondary and higher education students professionally by building their capacity through career counselling, mentorship, opportunities information, healthy entertainment and a supporting community network. It also gathers expert professionals from all educational sectors, all secondary and higher education institutions and all organizations working for empowerment of youth through any means under a single roof and connect them with students according to their needs.</p>
+              </div>
               </div>
               <div className="col-sm-12 col-lg-6">
                 <img

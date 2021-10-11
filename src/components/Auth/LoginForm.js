@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useHistory } from "react-router";
 import AuthContext from "../../Store/Auth-Context";
 import { getTypeFromEmail } from "../Utils/fetchers";
+import styles from "./RegistrationForm.module.css";
 const LoginForm = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
@@ -96,7 +97,7 @@ const LoginForm = () => {
         </div>
         <button
           type="submit"
-          className="btn btn-primary btn-lg btn-block text-white mt-5 w-75"
+          className={`${styles.butn} btn btn-primary btn-lg btn-block mt-5 w-75`}
         >
           Log in
         </button>

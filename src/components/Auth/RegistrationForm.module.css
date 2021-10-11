@@ -92,4 +92,15 @@ button:focus {
   .selectLayout {
     margin-top: 18px;
   }
-} ;
+} 
+
+.butn{
+  color:  #F96209;
+  background-color: #FFC30B;
+  border: none;
+
+}
+.butn:hover{
+  background-color: #fccc3b;
+  
+}
