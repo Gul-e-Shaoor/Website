@@ -92,8 +92,11 @@ const App = () => {
           </Route>
         )}
       </Switch>
+      <div>
       <Footer />
+      </div>
     </Router>
+    
   );
 };
 

@@ -40,7 +40,7 @@ const RegisWalker = () => {
     history.replace("/");
   };
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       <div
         style={{ marginTop: "84px", fontFamily: "Lato", overflowY: "hidden" }}
         className="py-1 px-2"

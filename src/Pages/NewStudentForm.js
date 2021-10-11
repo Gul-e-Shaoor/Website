@@ -171,7 +171,7 @@ const NewStudentForm = (props) => {
     });
   };
   return (
-    <div
+    <div 
       style={{
         marginRight: "20px",
         marginBottom: "10px",
