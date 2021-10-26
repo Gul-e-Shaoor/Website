@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
-import { validPhoneNumber } from "../RegEx/regex";
+// import { validPhoneNumber } from "../RegEx/regex";
 export const getObjId = async (email) => {
   const data = await fetch(
     `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users.json?orderBy="email"&equalTo="${email}"`
