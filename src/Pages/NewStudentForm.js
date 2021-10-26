@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
-
+import { validPhoneNumber } from "../RegEx/regex";
 export const getObjId = async (email) => {
   const data = await fetch(
     `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users.json?orderBy="email"&equalTo="${email}"`
@@ -171,7 +171,7 @@ const NewStudentForm = (props) => {
     });
   };
   return (
-    <div 
+    <div
       style={{
         marginRight: "20px",
         marginBottom: "10px",
@@ -235,7 +235,7 @@ const NewStudentForm = (props) => {
         </div>
         <div class="row">
           <div class="col m-3">
-            <label className="fw-bold h5">Mother's Phone Number</label>
+            <label className="fw-bold h5">Father's Phone Number</label>
             <input
               type="text"
               class="form-control"
@@ -246,7 +246,7 @@ const NewStudentForm = (props) => {
             />
           </div>
           <div class="col m-3">
-            <label className="fw-bold h5">Father's Phone Number</label>
+            <label className="fw-bold h5">Mother's Phone Number</label>
             <input
               type="text"
               class="form-control"

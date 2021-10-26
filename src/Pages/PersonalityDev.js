@@ -1,27 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../Styles/PersonalityDev.module.css";
 //import { Link } from "react-router-dom";
 const PersonalityDev = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <section
-      className="text-light mt-5"
-      style={{ fontFamily: "Lato" }}
-    >
+    <section className="text-light" style={{ fontFamily: "Lato" }}>
       <div className={`${styles.back} h-200`}>
         <div
-          className={`${styles.backOverlay} d-flex flex-column justify-content-center align-content-center h-100`}
+          className={`${styles.backOverlay} ${styles.trans} d-flex flex-column justify-content-center align-content-center h-100`}
         >
-          <div className="display-2 fw-normal text-center my-5">
+          <div className="display-3 fw-normal text-center my-5">
             Personality Development
           </div>
           <div
-            className="text-light fs-4 text-center fw-light "
+            className="text-light text-center fw-light "
             style={{ margin: "0 10%" }}
           >
-            Your personality speaks for you like nothing else. Here, we shall groom your personality, teach you soft skills and help you boost your confidence. You shall face the world with a new and unique approach.
+            Your personality speaks for you like nothing else. Here, we shall
+            groom your personality, teach you soft skills and help you boost
+            your confidence. You shall face the world with a new and unique
+            approach.
           </div>
         </div>
-        <div></div>
       </div>
       <div className="bg-dark p-5">
         <div className="container py-5">

@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CollabForm from "../components/CollabForm/CollabForm";
-import Navbar from "../components/Navbar";
 import collab from "../Images/collab.jpg";
 import "./Collaboration.css";
+import heroStyles from "../Styles/Hero.module.css";
 const Collaboration = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const someText2 =
     "We are always on the look out for volunteers who have experience in construction, mentoring, counselling, youth work and business management to contribute towards the delivery of our services. We also have paid vacancies from time to time and some of our volunteers are now paid members of staff. Come and join us!";
   const someText =
     "We offer 3 partnership models for working with a range of public sector, private sector, education providers, charities and community organisations. The aim is to collaborate as a community to make a sustainable positive social impact.";
   return (
     <div style={{ fontFamily: "Lato" }}>
-      <Navbar />
       <div className="container-fluid p-0 collab-div position-relative">
         <img
           src={collab}
@@ -51,7 +53,10 @@ const Collaboration = () => {
                 <br /> * Your logo promoted on our marketing materials as a
                 partner.
               </p>
-              <a href="#form" className="btn btn-primary">
+              <a
+                href="#form"
+                className={`${heroStyles.regiter_btn} btn btn-primary`}
+              >
                 Collaborate
               </a>
             </div>
@@ -79,7 +84,10 @@ const Collaboration = () => {
                 also work with education providers as an intervention advocate
                 to support positive student-teacher engagement.
               </p>
-              <a href="#form" className="btn btn-primary">
+              <a
+                href="#form"
+                className={`${heroStyles.regiter_btn} btn btn-primary`}
+              >
                 Collaborate
               </a>
             </div>
@@ -106,7 +114,10 @@ const Collaboration = () => {
                 They work with us by referring young people with an interest in
                 or studying construction.
               </p>
-              <a href="#form" className="btn btn-primary">
+              <a
+                href="#form"
+                className={`${heroStyles.regiter_btn} btn btn-primary`}
+              >
                 Collaborate
               </a>
             </div>
@@ -132,7 +143,10 @@ const Collaboration = () => {
                 skills and experience so get in touch today to see how you can
                 help us to Elevate The Youth.
               </p>
-              <a href="#form" className="btn btn-primary">
+              <a
+                href="#form"
+                className={`${heroStyles.regiter_btn} btn btn-primary`}
+              >
                 Collaborate
               </a>
             </div>
