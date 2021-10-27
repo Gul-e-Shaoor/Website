@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
-// import { validPhoneNumber } from "../RegEx/regex";
+import { validPhoneNumber } from "../RegEx/regex";
 export const getObjId = async (email) => {
   const data = await fetch(
     `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users.json?orderBy="email"&equalTo="${email}"`
@@ -11,10 +11,13 @@ export const getObjId = async (email) => {
 };
 
 const NewStudentForm = (props) => {
+  const [phoneNumberErr, setPhoneNumberErr] = useState(false);
+  const validate = () => {};
   const [street1, setStreet1] = useState("");
   const [street2, setStreet2] = useState("");
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [mothersContact, setMothersContact] = useState("");
   const [fathersContact, setFathersContact] = useState("");
   const [mothersJob, setMothersJob] = useState("");
@@ -44,41 +47,47 @@ const NewStudentForm = (props) => {
       street2: street2.street2,
     };
     const id = getObjId(email);
-    fetch(
-      `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users/${id}/PersonalData.json`,
-      {
-        method: "PUT",
-        body: JSON.stringify({
-          name,
-          age,
-          mothersContact,
-          fathersContact,
-          mothersJob,
-          fathersJob,
-          noOfSiblings,
-          birthOrder,
-          educationalBack,
-          matricPercent,
-          fscPercent,
-          degYear,
-          guardianSalary,
-          firstYearPercent,
-          ninthPercent,
-          finalAdress,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    ).then((res) => {
-      if (res.ok) {
-      } else {
-        res.json().then((data) => {
-          console.log(data);
-        });
-      }
-    });
-    props.appMan();
+    console.log(phoneNumberErr);
+    if (phoneNumberErr) {
+      console.log("invalid Phone Number format");
+    } else {
+      fetch(
+        `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users/${id}/PersonalData.json`,
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            name,
+            age,
+            phoneNumber,
+            mothersContact,
+            fathersContact,
+            mothersJob,
+            fathersJob,
+            noOfSiblings,
+            birthOrder,
+            educationalBack,
+            matricPercent,
+            fscPercent,
+            degYear,
+            guardianSalary,
+            firstYearPercent,
+            ninthPercent,
+            finalAdress,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      ).then((res) => {
+        if (res.ok) {
+        } else {
+          res.json().then((data) => {
+            console.log(data);
+          });
+        }
+      });
+      props.appMan();
+    }
   };
 
   const nameChangeHandler = (e) => {
@@ -88,6 +97,16 @@ const NewStudentForm = (props) => {
   const ageChangeHandler = (e) => {
     const val = e.target.value;
     setAge(val);
+  };
+  const phoneNumberHandler = (e) => {
+    const val = e.target.value;
+    if (!validPhoneNumber.test(val)) {
+      setPhoneNumberErr(true);
+    }
+    if (validPhoneNumber.test(val)) {
+      setPhoneNumberErr(false);
+    }
+    setPhoneNumber(val);
   };
 
   const motherPhoneChangeHandler = (e) => {
@@ -217,8 +236,12 @@ const NewStudentForm = (props) => {
                 className="form-control"
                 placeholder="Phone Number"
                 aria-label="phone number"
+                onChange={phoneNumberHandler}
                 required
               />
+              {phoneNumberErr && (
+                <div className="phone">Your Phone number is not correct</div>
+              )}
             </div>
           </div>
           <div className="col m-3">
@@ -451,6 +474,7 @@ const NewStudentForm = (props) => {
           <button
             className="btn btn-outline-light my-4"
             style={{ width: "100px" }}
+            onClick={validate}
           >
             Save
           </button>
