@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import styles from "../Styles/Entertainment.module.css";
 import axios from "axios";
 const Entertainment = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [book, setBook] = useState("");
   const [result, setresult] = useState([]);
   const [apiKey] = useState("AIzaSyCcfI6rt6c3Tud2mesND-oDaCcAW-DarUM");
@@ -45,7 +48,8 @@ const Entertainment = () => {
                 <a
                   className="nav-link"
                   href="https://medium.com/"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Blogs
                 </a>
@@ -63,7 +67,9 @@ const Entertainment = () => {
         <div className="h-100 d-flex flex-column justify-content-center align-items-center">
           <div className="display-2 text-center">Entertainment</div>
           <div className="text-center py-5" style={{ width: "50%" }}>
-            We believe in "All work and no play makes Jack a dull boy". At our platform, you'll get entertainment along with mentorship, and that way you'll never lose interest.
+            We believe in "All work and no play makes Jack a dull boy". At our
+            platform, you'll get entertainment along with mentorship, and that
+            way you'll never lose interest.
           </div>
         </div>
       </div>
@@ -166,7 +172,8 @@ const Entertainment = () => {
                     <a
                       href={book.volumeInfo.previewLink}
                       target="_blank"
-                      className="text-center" rel="noreferrer"
+                      className="text-center"
+                      rel="noreferrer"
                     >
                       <img
                         src={book.volumeInfo.imageLinks.thumbnail}

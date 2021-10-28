@@ -1,7 +1,11 @@
 import About from "./About";
 import { Link } from "react-router-dom";
 import { openPopupWidget } from "react-calendly";
+import { useEffect } from "react";
 const ProfilePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const ButtonHandler = () => {
     openPopupWidget({
       url: `https://calendly.com/sessionviaguleshaoor`,

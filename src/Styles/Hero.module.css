@@ -16,3 +16,7 @@
   background-color: transparent;
   border: 2px solid #ffc30b;
 }
+
+.disp {
+  height: 100vh;
+}

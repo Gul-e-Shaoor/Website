@@ -7,6 +7,7 @@ export const getObjId = async (email) => {
     `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users.json?orderBy="email"&equalTo="${email}"`
   );
   const result = await data.json();
+  console.log(Object.keys(result)[0]);
   return Object.keys(result)[0];
 };
 
@@ -43,6 +44,7 @@ const NewStudentForm = (props) => {
 
   const authCtx = useContext(AuthContext);
   const email = authCtx.email;
+  console.log(email)
   const formSubmitHandler = (e) => {
     e.preventDefault();
     const finalAdress = {
@@ -50,7 +52,8 @@ const NewStudentForm = (props) => {
       street1: street1.street1,
       street2: street2.street2,
     };
-    const id = getObjId(email);
+    const id = async () => (getObjId(email));
+    console.log(id)
     console.log(phoneNumberErr);
     if (phoneNumberErr && phoneNumMotherErr && phoneNumFatherErr) {
       console.log("invalid Phone Number format");
@@ -62,7 +65,7 @@ const NewStudentForm = (props) => {
           body: JSON.stringify({
             name,
             age,
-            phoneNumber,
+            // phoneNumber,
             mothersContact,
             fathersContact,
             mothersJob,

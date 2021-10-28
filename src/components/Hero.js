@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Styles/Hero.module.css";
 const Hero = () => {
+  useEffect(() => {
+    window.scrollTo(0, 100);
+  }, []);
   return (
     <Fragment>
-      <section style={{ marginTop: "80px" }} className={`bg-dark p-5`}>
-        <div className="container">
-          <div className="d-grid">
-            <div className="row justify-content-between">
+      <section className={`bg-dark p-5`}>
+        <div className={`container ${styles.disp}`}>
+          <div className="d-grid" style={{ height: "100%" }}>
+            <div className="row justify-content-between align-items-center">
               <div className="col-sm-12 col-lg-6 d-flex flex-column ">
                 <div className="d-flex justify-content-start align-content-center">
                   <Link
                     to="/careers"
                     className={`${styles.btnText} btn btn-outline-light mx-2 my-4 flex-grow-1`}
                   >
-                    <i className="fa fa-graduation-cap mx-2"></i> Careers 
+                    <i className="fa fa-graduation-cap mx-2"></i> Careers
                   </Link>
                   <Link
                     to="/auth"
                     // eslint-disable-next-line no-sequences
-                    className={`${styles.btnText,styles.regiter_btn} btn btn-primary mx-2 my-4 flex-grow-1`}
+                    className={`${
+                      (styles.btnText, styles.regiter_btn)
+                    } btn btn-primary mx-2 my-4 flex-grow-1`}
                   >
                     <i className="fa fa-sign-in mx-2"></i> Register
                   </Link>
@@ -33,7 +38,11 @@ const Hero = () => {
                     className="fs-6 text-light py-3 "
                     style={{ opacity: "0.8" }}
                   >
-                   We nurture young minds towards a productive approach and build their capacity for career development over international standards by fulfilling their need of counselling, mentorship, information, healthy entertainment and a supporting community.
+                    We nurture young minds towards a productive approach and
+                    build their capacity for career development over
+                    international standards by fulfilling their need of
+                    counselling, mentorship, information, healthy entertainment
+                    and a supporting community.
                   </p>
                 </div>
               </div>
