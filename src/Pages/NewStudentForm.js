@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import AuthContext from "../Store/Auth-Context";
 import "./NewStudentForm.css";
-import { validPhoneNumber } from "../RegEx/regex";
+import { validPhoneNumber, validNoOfSiblings } from "../RegEx/regex";
 export const getObjId = async (email) => {
   const data = await fetch(
     `https://gul-e-shaoor-default-rtdb.firebaseio.com/Users.json?orderBy="email"&equalTo="${email}"`
@@ -12,6 +12,10 @@ export const getObjId = async (email) => {
 
 const NewStudentForm = (props) => {
   const [phoneNumberErr, setPhoneNumberErr] = useState(false);
+  const [phoneNumMotherErr, setPhoneNumMotherErr] = useState(false);
+  const [phoneNumFatherErr, setPhoneNumFatherErr] = useState(false);
+  const [noOfSiblingsErr, setNoOfSiblingsErr] = useState(false);
+  const [orderOfBirthErr, setOrderOfBirthErr] = useState(false);
   const validate = () => {};
   const [street1, setStreet1] = useState("");
   const [street2, setStreet2] = useState("");
@@ -48,7 +52,7 @@ const NewStudentForm = (props) => {
     };
     const id = getObjId(email);
     console.log(phoneNumberErr);
-    if (phoneNumberErr) {
+    if (phoneNumberErr && phoneNumMotherErr && phoneNumFatherErr) {
       console.log("invalid Phone Number format");
     } else {
       fetch(
@@ -111,6 +115,12 @@ const NewStudentForm = (props) => {
 
   const motherPhoneChangeHandler = (e) => {
     const val = e.target.value;
+    if (!validPhoneNumber.test(val)) {
+      setPhoneNumMotherErr(true);
+    }
+    if (validPhoneNumber.test(val)) {
+      setPhoneNumMotherErr(false);
+    }
     setMothersContact(val);
   };
   const mothersJobChangeHandler = (e) => {
@@ -119,6 +129,12 @@ const NewStudentForm = (props) => {
   };
   const fathersPhoneChangeHandler = (e) => {
     const val = e.target.value;
+    if (!validPhoneNumber.test(val)) {
+      setPhoneNumFatherErr(true);
+    }
+    if (validPhoneNumber.test(val)) {
+      setPhoneNumFatherErr(false);
+    }
     setFathersContact(val);
   };
   const fathersJobChangeHandler = (e) => {
@@ -127,10 +143,23 @@ const NewStudentForm = (props) => {
   };
   const siblingChangeHandler = (e) => {
     const val = e.target.value;
+    console.log(val);
+    if (!validNoOfSiblings.test(val)) {
+      setNoOfSiblingsErr(true);
+    } else if (validPhoneNumber.test(val)) {
+      setNoOfSiblingsErr(false);
+    }
     setNoOfSiblings(val);
   };
   const birthOrderChangeHandler = (e) => {
     const val = e.target.value;
+    if (!validNoOfSiblings.test(val)) {
+      setOrderOfBirthErr(true);
+      console.log("Wrong Siblings");
+    } else if (validPhoneNumber.test(val)) {
+      setOrderOfBirthErr(false);
+      console.log("Correct Siblings");
+    }
     setBirthOrder(val);
   };
   const educationChangeHandler = (e) => {
@@ -247,13 +276,16 @@ const NewStudentForm = (props) => {
           <div className="col m-3">
             <label className="fw-bold h5">Number of Siblings</label>
             <input
-              type="number"
+              type="text"
               class="form-control"
               placeholder="Number of Siblings"
               aria-label=""
               onChange={siblingChangeHandler}
               required
             />
+            {noOfSiblingsErr && (
+              <div className="phone">please write a number between 0-10</div>
+            )}
           </div>
         </div>
         <div class="row">
@@ -262,22 +294,28 @@ const NewStudentForm = (props) => {
             <input
               type="text"
               class="form-control"
-              placeholder="Mothers Phone Number"
-              aria-label="Mothers Phone Number"
-              onChange={motherPhoneChangeHandler}
+              placeholder="Father's Phone Number"
+              aria-label="Father's Phone Number"
+              onChange={fathersPhoneChangeHandler}
               required
             />
+            {phoneNumFatherErr && (
+              <div className="phone">Your Phone number is not correct</div>
+            )}
           </div>
           <div class="col m-3">
             <label className="fw-bold h5">Mother's Phone Number</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Fathers Phone Number"
-              aria-label="Fathers Phone Number"
-              onChange={fathersPhoneChangeHandler}
+              placeholder="Mother's Phone Number"
+              aria-label="Mother's Phone Number"
+              onChange={motherPhoneChangeHandler}
               required
             />
+            {phoneNumMotherErr && (
+              <div className="phone">Your Phone number is not correct</div>
+            )}
           </div>
         </div>
         <div class="row">
@@ -315,6 +353,11 @@ const NewStudentForm = (props) => {
               onChange={birthOrderChangeHandler}
               required
             />
+            {orderOfBirthErr && (
+              <div className="phone">
+                Please write a number between range 1-10
+              </div>
+            )}
           </div>
           <div class="col m-3">
             <label className="fw-bold h5">Educational Background</label>
