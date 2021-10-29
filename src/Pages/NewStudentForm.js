@@ -44,7 +44,7 @@ const NewStudentForm = (props) => {
 
   const authCtx = useContext(AuthContext);
   const email = authCtx.email;
-  console.log(email)
+  console.log(email);
   const formSubmitHandler = (e) => {
     e.preventDefault();
     const finalAdress = {
@@ -52,8 +52,8 @@ const NewStudentForm = (props) => {
       street1: street1.street1,
       street2: street2.street2,
     };
-    const id = async () => (getObjId(email));
-    console.log(id)
+    const id = async () => getObjId(email);
+    console.log(id);
     console.log(phoneNumberErr);
     if (phoneNumberErr && phoneNumMotherErr && phoneNumFatherErr) {
       console.log("invalid Phone Number format");
@@ -65,7 +65,7 @@ const NewStudentForm = (props) => {
           body: JSON.stringify({
             name,
             age,
-            // phoneNumber,
+            phoneNumber,
             mothersContact,
             fathersContact,
             mothersJob,
