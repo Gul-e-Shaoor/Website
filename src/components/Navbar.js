@@ -18,7 +18,7 @@ const Navbar = () => {
     <Fragment>
       <nav
         style={{ fontFamily: "Lato" }}
-        className={`${styles.nav}  fixed-top shadow`}
+        className={`${styles.nav} bg-dark shadow`}
       >
         <span className="navbar-brand ms-3">
           <img
@@ -41,7 +41,7 @@ const Navbar = () => {
 
             <Link to="/services">Services</Link>
 
-          <Link to ="/about">About</Link>
+            <Link to="/about">About</Link>
 
             {!isLoggedIn && <Link to="/auth">Log in</Link>}
 

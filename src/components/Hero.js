@@ -3,14 +3,11 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Styles/Hero.module.css";
 const Hero = () => {
-  useEffect(() => {
-    window.scrollTo(0, 100);
-  }, []);
   return (
     <Fragment>
       <section className={`bg-dark p-5`}>
         <div className={`container ${styles.disp}`}>
-          <div className="d-grid" style={{ height: "100%" }}>
+          <div className="d-grid" style={{ height: "80%" }}>
             <div className="row justify-content-between align-items-center">
               <div className="col-sm-12 col-lg-6 d-flex flex-column ">
                 <div className="d-flex justify-content-start align-content-center">

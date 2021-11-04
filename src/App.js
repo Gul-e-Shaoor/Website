@@ -33,7 +33,7 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route path="/" exact>
-          <div style={{ fontFamily: "Lato", marginTop: "80px" }}>
+          <div style={{ fontFamily: "Lato" }}>
             <Home />
           </div>
         </Route>
@@ -93,10 +93,9 @@ const App = () => {
         )}
       </Switch>
       <div>
-      <Footer />
+        <Footer />
       </div>
     </Router>
-    
   );
 };
 

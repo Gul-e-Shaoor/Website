@@ -6,9 +6,6 @@ import Mentors from "../components/Mentors";
 import CareerCounsellors from "../components/CareerCounsellors";
 import Collaboration from "./Collaboration";
 const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 100);
-  }, []);
   return (
     <div>
       <Hero />
