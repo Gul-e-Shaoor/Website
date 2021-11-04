@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
-import styles from "../Styles/Entertainment.module.css";
+import styles from "../Styles/Entertainment.module.scss";
 import axios from "axios";
 const Entertainment = () => {
   useEffect(() => {

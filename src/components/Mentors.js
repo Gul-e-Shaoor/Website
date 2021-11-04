@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styles/MntrProfGrid.module.css";
+import styles from "../Styles/MntrProfGrid.module.scss";
 import MentorProfile from "./mentorship-section/MentorProfile";
 const Mentors = () => {
   return (

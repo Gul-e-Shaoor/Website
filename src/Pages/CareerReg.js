@@ -1,4 +1,4 @@
-import "./CareerReg.css";
+import "./CareerReg.scss";
 import CareerForm from "../components/CareerForm/CareerForm";
 import { useParams } from "react-router";
 const CareerReg = () => {

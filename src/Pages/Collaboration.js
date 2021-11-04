@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import CollabForm from "../components/CollabForm/CollabForm";
 import collab from "../Images/collab.jpg";
-import "./Collaboration.css";
-import heroStyles from "../Styles/Hero.module.css";
+import "./Collaboration.scss";
+import heroStyles from "../Styles/Hero.module.scss";
 const Collaboration = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

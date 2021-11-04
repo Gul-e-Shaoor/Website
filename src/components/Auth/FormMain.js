@@ -1,7 +1,7 @@
 import React from "react";
 import LoginForm from "./LoginForm";
 import RegistrationForm from "./RegistrationForm";
-import styles from "./FormMain.module.css";
+import styles from "./FormMain.module.scss";
 const FormMain = () => {
   return (
     <div

@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import styles from "../Styles/Services.module.css";
+import styles from "../Styles/Services.module.scss";
 const Services = () => {
   return (
     <Fragment>
@@ -11,43 +11,54 @@ const Services = () => {
       >
         <div className="container py-5 ">
           <div className="display-2 text-center">Our Services</div>
-          <div className="row py-5 justify-content-center gx-3 gy-3">
+          <div className="row py-5 justify-content-center gx-lg-5 gx-md-2 gy-5">
             <div className="col-sm-6 col-md-4 col-lg-4 ">
-              <div className={`${styles.cardAnimation} card h-100 shadow`}>
+              <div
+                className={`${styles.cardAnimation} card shadow`}
+                style={{ height: "90%" }}
+              >
                 <img
                   src={require("../Images/mentorship.jpg").default}
                   alt=""
                   className="img-fluid card-img-top"
                 />
                 <div className="card-body text-center">
-                  <div className="card-text my-2">
+                  <div className="my-2" style={{ fontSize: "0.9rem" }}>
                     We offer totally unpaid mentorships from experienced
                     mentors, guiding you in your affairs and showing you what
                     path to chose.
                   </div>
-                  <Link to="/mentorship" className="btn btn-outline-dark my-3">
+                  <Link
+                    to="/mentorship"
+                    className="btn btn-outline-dark my-4"
+                    style={{ fontSize: "0.8rem" }}
+                  >
                     Mentorship
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-4 ">
-              <div className={`${styles.cardAnimation} card h-100 shadow`}>
+              <div
+                className={`${styles.cardAnimation} card  shadow`}
+                style={{ height: "90%" }}
+              >
                 <img
                   src={require("../Images/counselling.jpg").default}
                   alt=""
                   className="img-fluid card-img-top"
                 />
                 <div className="card-body text-center">
-                  <div className="card-text my-2">
+                  <div className=" my-2" style={{ fontSize: "0.9rem" }}>
                     Choosing a career is one of the most significant decisions
-                    youll ever come across. Our career counselors shall help and
-                    guide you in chosing the right career in accordance with
-                    your aptitue and interests.
+                    you'll ever come across. Our career counselors shall help
+                    and guide you in choosing the right career by your attitude
+                    and interests.
                   </div>
                   <Link
                     to="/careerCounselling"
                     className="btn btn-outline-dark my-3"
+                    style={{ fontSize: "0.8rem" }}
                   >
                     Career Counselling
                   </Link>
@@ -55,14 +66,17 @@ const Services = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-4">
-              <div className={`${styles.cardAnimation} card h-100 shadow`}>
+              <div
+                className={`${styles.cardAnimation} card  shadow`}
+                style={{ height: "90%" }}
+              >
                 <img
                   src={require("../Images/opportunity.jpg").default}
                   alt=""
                   className="img-fluid card-img-top"
                 />
                 <div className="card-body text-center">
-                  <div className="card-text my-2">
+                  <div className=" my-2" style={{ fontSize: "0.9rem" }}>
                     Your personality speaks for you like nothing else. Here, we
                     shall groom your personality, teach you soft skills and help
                     you boost your confidence. You shall face the world with a
@@ -71,6 +85,7 @@ const Services = () => {
                   <Link
                     to="/personalitydev"
                     className="btn btn-outline-dark my-3"
+                    style={{ fontSize: "0.8rem" }}
                   >
                     Personality Development
                   </Link>
@@ -78,31 +93,43 @@ const Services = () => {
               </div>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-4">
-              <div className={`${styles.cardAnimation} card h-100 shadow`}>
+              <div
+                className={`${styles.cardAnimation} card  shadow`}
+                style={{ height: "90%" }}
+              >
                 <img
                   src={require("../Images/support.jpg").default}
                   alt=""
                   className="img-fluid card-img-top"
                 />
                 <div className="card-body text-center">
-                  <div className="card-text my-2">
-                  We have a good package for your support in form of a community as well as Consultation portal for other issues as well. Check now!.
+                  <div className=" my-2" style={{ fontSize: "0.9rem" }}>
+                    We have a good package for your support in form of a
+                    community as well as Consultation portal for other issues as
+                    well. Check now!.
                   </div>
-                  <Link to="/support" className="btn btn-outline-dark my-3">
+                  <Link
+                    to="/support"
+                    className="btn btn-outline-dark my-3"
+                    style={{ fontSize: "0.8rem" }}
+                  >
                     Support
                   </Link>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-4">
-              <div className={`${styles.cardAnimation} card h-100 shadow`}>
+              <div
+                className={`${styles.cardAnimation} card  shadow`}
+                style={{ height: "90%" }}
+              >
                 <img
                   src={require("../Images/entertainment.jpg").default}
                   alt=""
                   className="img-fluid card-img-top"
                 />
                 <div className="card-body text-center">
-                  <div className="card-text my-2">
+                  <div className=" my-2" style={{ fontSize: "0.9rem" }}>
                     We believe in "All work and no play makes Jack a dull boy".
                     At our platform, you'll get entertainment along with
                     mentorship, and that way you'll never lose interest.
@@ -110,6 +137,7 @@ const Services = () => {
                   <Link
                     to="/entertainment"
                     className="btn btn-outline-dark my-3"
+                    style={{ fontSize: "0.8rem" }}
                   >
                     Entertainment
                   </Link>

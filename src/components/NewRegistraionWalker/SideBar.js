@@ -1,4 +1,4 @@
-import "./SideBar.css";
+import "./SideBar.scss";
 import img from "../../Images/student.jpg";
 const SideBar = (props) => {
   return (

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styles from "../Styles/Navbar.module.css";
+import styles from "../Styles/Navbar.module.scss";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthContext from "../Store/Auth-Context";

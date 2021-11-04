@@ -1,4 +1,4 @@
-import "./StudentProfile.css";
+import "./StudentProfile.scss";
 import { Fragment } from "react";
 import img from "../Images/student.jpg";
 import img3 from "../Images/mentor.jpg";

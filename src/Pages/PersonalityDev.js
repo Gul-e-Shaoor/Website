@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "../Styles/PersonalityDev.module.css";
-//import { Link } from "react-router-dom";
+import styles from "../Styles/PersonalityDev.module.scss";
 const PersonalityDev = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

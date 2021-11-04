@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import ProfilePage from "./components/mentor-profiles/ProfilePage";
 import CareerProfilePage from "./components/careerCounsellors-profiles/CareerProfilePage";
 import Navbar from "./components/Navbar";

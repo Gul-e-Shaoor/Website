@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../Styles/CrerCounslrs.module.css";
+import styles from "../Styles/CrerCounslrs.module.scss";
 import CareerProfile from "./careerCounsellors-profiles/CareerProfile";
 
 const CareerCounsellors = () => {

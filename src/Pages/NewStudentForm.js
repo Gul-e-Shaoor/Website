@@ -1,6 +1,6 @@
 import { useContext, useRef, useState } from "react";
 import AuthContext from "../Store/Auth-Context";
-import "./NewStudentForm.css";
+import "./NewStudentForm.scss";
 import { validPhoneNumber, validNoOfSiblings } from "../RegEx/regex";
 export const getObjId = async (email) => {
   const data = await fetch(

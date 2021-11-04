@@ -3,7 +3,7 @@ import Instagram from "../SVGS/Instagram";
 import Twitter from "../SVGS/Twitter";
 import Linkedin from "../SVGS/Linkedin";
 import { useState } from "react";
-import "./CollabForm.css";
+import "./CollabForm.scss";
 import { fetchAndCompareEmail } from "../Utils/fetchers";
 import { useRef } from "react";
 const CollabForm = () => {

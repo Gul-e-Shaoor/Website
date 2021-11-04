@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import img from "../Images/mentor.jpg";
-import "./MentorProfile.css";
+import "./MentorProfile.scss";
 const MentorProfile = () => {
   const students = [
     "Muhammad Ali",

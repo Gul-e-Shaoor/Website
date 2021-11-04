@@ -5,7 +5,7 @@ import medicine from "../Images/financeDirector.webp";
 import cs from "../Images/phsycologists.jpg";
 import imgTemp from "../Images/careerCounsellor.jpg";
 import imgTemp2 from "../Images/mentorship.jpeg";
-import "./Pictures.css";
+import "./Pictures.scss";
 import { useHistory } from "react-router";
 const Pictures = () => {
   const history = useHistory();

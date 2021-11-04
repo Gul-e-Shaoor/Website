@@ -1,4 +1,4 @@
-import styles from "../../Styles/MntrProfGrid.module.css";
+import styles from "../../Styles/MntrProfGrid.module.scss";
 
 const Header = () => {
   return (
