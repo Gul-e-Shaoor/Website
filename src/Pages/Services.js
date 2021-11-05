@@ -1,8 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Styles/Services.module.scss";
 const Services = () => {
+  const [pic, setPic] = useState(false);
   return (
     <Fragment>
       <section
@@ -141,6 +143,83 @@ const Services = () => {
                   >
                     Entertainment
                   </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.bodyCard}`}>
+            <div className={`${styles.options}`}>
+              <div
+                className={`${styles.option} ${pic ? styles.active : ""}`}
+                onClick={() => setPic(!pic)}
+              >
+                <div className={`${styles.shadow}`}></div>
+                <div className={`${styles.label}`}>
+                  <div className={`${styles.icon}`}>
+                    <i className="fas fa-walking"></i>
+                  </div>
+                  <div className={`${styles.info}`}>
+                    <div className={`${styles.main}`}>Blonkisoaz</div>
+                    <div className={`${styles.sub}`}>
+                      Omuke trughte a otufta
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.option}`}>
+                <div className={`${styles.shadow}`}></div>
+                <div className={`${styles.label}`}>
+                  <div className={`${styles.icon}`}>
+                    <i className="fas fa-walking"></i>
+                  </div>
+                  <div className={`${styles.info}`}>
+                    <div className={`${styles.main}`}>Blonkisoaz</div>
+                    <div className={`${styles.sub}`}>
+                      Omuke trughte a otufta
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.option}`}>
+                <div className={`${styles.shadow}`}></div>
+                <div className={`${styles.label}`}>
+                  <div className={`${styles.icon}`}>
+                    <i className="fas fa-walking"></i>
+                  </div>
+                  <div className={`${styles.info}`}>
+                    <div className={`${styles.main}`}>Blonkisoaz</div>
+                    <div className={`${styles.sub}`}>
+                      Omuke trughte a otufta
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.option}`}>
+                <div className={`${styles.shadow}`}></div>
+                <div className={`${styles.label}`}>
+                  <div className={`${styles.icon}`}>
+                    <i className="fas fa-walking"></i>
+                  </div>
+                  <div className={`${styles.info}`}>
+                    <div className={`${styles.main}`}>Blonkisoaz</div>
+                    <div className={`${styles.sub}`}>
+                      Omuke trughte a otufta
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.option}`}>
+                <div className={`${styles.shadow}`}></div>
+                <div className={`${styles.label}`}>
+                  <div className={`${styles.icon}`}>
+                    <i className="fas fa-walking"></i>
+                  </div>
+                  <div className={`${styles.info}`}>
+                    <div className={`${styles.main}`}>Blonkisoaz</div>
+                    <div className={`${styles.sub}`}>
+                      Omuke trughte a otufta
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
