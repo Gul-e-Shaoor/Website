@@ -1,7 +1,6 @@
 .cardAnimation {
   transition: all 0.2s ease-in-out;
 }
-$optionBackground: url(../Images/mentorship.jpg);
 .cardAnimation:hover {
   transform: scale(1.03);
 }
@@ -41,7 +40,7 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
     height: 400px;
 
     @for $i from 1 through 4 {
-      @media screen and (max-width: 798px - $i*80) {
+      @media screen and (max-width: (798px - $i*80)) {
         min-width: 600px - $i * 80;
         .option:nth-child(#{6-$i}) {
           display: none;
@@ -56,10 +55,6 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
       min-width: 60px;
       margin: 10px;
       //border:0px solid --defaultColor;
-
-      background: $optionBackground;
-      background-size: auto 120%;
-      background-position: center;
 
       cursor: pointer;
 

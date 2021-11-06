@@ -1,5 +1,5 @@
 import { Fragment } from "react/cjs/react.production.min";
-import "./CourseEnrollment.css";
+import "./CourseEnrollment.scss";
 const CourseEnrollment = (props) => {
   const btnClickHandler = () => {
     props.messageHandler();

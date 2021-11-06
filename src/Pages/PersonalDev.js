@@ -1,5 +1,5 @@
 import { Fragment } from "react/cjs/react.production.min";
-import "./PersonalDev.css";
+import "./PersonalDev.scss";
 import inter from "../Images/InterPersonalSkills.jpg";
 import intra from "../Images/intrapersonalSkills.jpg";
 import bussiness from "../Images/business.jpg";
