@@ -8,6 +8,7 @@ import image2 from "../Images/entertainment.jpg";
 import image3 from "../Images/support.jpg";
 import image4 from "../Images/opportunity.jpg";
 import image5 from "../Images/counselling.jpg";
+import LetteredAvatar from "react-lettered-avatar";
 const Services = () => {
   const [pic, setPic] = useState(1);
 
@@ -31,9 +32,9 @@ const Services = () => {
         style={{ fontFamily: "Lato" }}
       >
         <div className="container py-5 ">
-          <div className="display-2 text-center">Our Services</div>
+          <div className="display-3 text-center">Our Services</div>
 
-          <div className={`${styles.bodyCard}`}>
+          <div className={`${styles.bodyCard} my-5`}>
             <div className={`${styles.options}`}>
               {list.map((x) => {
                 return (
@@ -53,7 +54,11 @@ const Services = () => {
                     <div className={`${styles.shadow}`}></div>
                     <div className={`${styles.label}`}>
                       <div className={`${styles.icon}`}>
-                        <i className="fas fa-walking"></i>
+                        <LetteredAvatar
+                          name="C"
+                          size={41}
+                          backgroundColor="#fafafa"
+                        />
                       </div>
                       <div className={`${styles.info}`}>
                         <div className={`${styles.main}`}>Blonkisoaz</div>
