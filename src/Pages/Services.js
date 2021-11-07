@@ -13,11 +13,11 @@ const Services = () => {
   const [pic, setPic] = useState(1);
 
   const list = [
-    { id: 1, url: image1 },
-    { id: 2, url: image2 },
-    { id: 3, url: image3 },
-    { id: 4, url: image4 },
-    { id: 5, url: image5 },
+    { id: 1, url: image1, name: "M", info: "Mentorship" },
+    { id: 2, url: image2, name: "E", info: "Entertainment" },
+    { id: 3, url: image3, name: "S", info: "Support" },
+    { id: 4, url: image4, name: "O", info: "Opportunity" },
+    { id: 5, url: image5, name: "C", info: "Career Counselling" },
   ];
 
   // const clickHandler = (e) => {
@@ -55,13 +55,13 @@ const Services = () => {
                     <div className={`${styles.label}`}>
                       <div className={`${styles.icon}`}>
                         <LetteredAvatar
-                          name="C"
+                          name={x.name}
                           size={41}
                           backgroundColor="#fafafa"
                         />
                       </div>
                       <div className={`${styles.info}`}>
-                        <div className={`${styles.main}`}>Blonkisoaz</div>
+                        <div className={`${styles.main}`}>{x.info}</div>
                         <div className={`${styles.sub}`}>
                           Omuke trughte a otufta
                         </div>
