@@ -34,29 +34,35 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
 
     min-width: 600px;
     max-width: 900px;
-    width: calc(100% - 100px);
+    width: calc(100% - 50px);
+    @media screen and (max-width: 740px) {
+      min-width: 150px;
+      max-width: 600px;
+    }
+    height: 100%;
 
-    height: 400px;
-
-    @for $i from 1 through 4 {
-      @media screen and (max-width: (798px - $i*80)) {
-        min-width: 600px - $i * 80;
-        .option:nth-child(#{6-$i}) {
-          display: none;
-        }
-      }
+    @media screen and (max-width: 740px) {
+      display: flex;
+      flex-direction: column;
     }
 
     .option {
       position: relative;
       overflow: hidden;
-
       min-width: 60px;
       margin: 10px;
       //border:0px solid --defaultColor;
+      background-size: "auto 100%" !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
 
       cursor: pointer;
-
+      @media screen and (max-width: 740px) {
+        overflow: visible;
+        max-width: 400px;
+        height: 60px;
+        background-size: "auto 100%" !important;
+      }
       transition: all 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
       @for $i from 1 through length($optionDefaultColours) {
         &:nth-child(#{$i}) {
@@ -68,12 +74,20 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
         flex-grow: 10000;
         transform: scale(1);
 
-        max-width: 600px;
+        max-width: 100%;
+        height: 400px;
         margin: 0px;
         border-radius: 40px;
 
-        background-size: auto 100%;
         transition: all 0.2s ease-in;
+        @media screen and (max-width: 740px) {
+          overflow: hidden;
+          height: 400px !important;
+        }
+        @media screen and (max-width: 715px) {
+          overflow: hidden;
+          width: 100%;
+        }
         &:hover {
           background-color: rgba(0, 0, 0, 0.7) !important ;
           background-blend-mode: overlay !important;
@@ -100,11 +114,12 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
         flex-grow: 1;
 
         border-radius: 30px;
-        .shadow {
-          bottom: -40px;
-          box-shadow: inset 0 -120px 0px -120px black,
-            inset 0 -120px 0px -100px black;
-        }
+
+        // .shadow {
+        //   bottom: -40px;
+        //   box-shadow: inset 0 -120px 0px -120px black,
+        //     inset 0 -120px 0px -100px black;
+        // }
         .label {
           bottom: 10px;
           left: 10px;
@@ -131,6 +146,7 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
         height: 300px;
         width: 100%;
         text-align: center;
+        font-size: clamp(0.7rem, 2vw, 1.1rem);
         transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
       }
       .label {

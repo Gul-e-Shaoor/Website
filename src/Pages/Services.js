@@ -71,7 +71,7 @@ const Services = () => {
         className="bg-light p-5 text-dark"
         style={{ fontFamily: "Lato" }}
       >
-        <div className="container py-5 ">
+        <div className="py-5 ">
           <div className="display-3 text-center">Our Services</div>
 
           <div className={`${styles.bodyCard} my-5`}>
@@ -87,13 +87,11 @@ const Services = () => {
                     onClick={() => setPic(x.id)}
                     style={{
                       background: `url(${x.url})`,
-                      backgroundSize: "auto 100%",
-                      backgroundPosition: "center",
                     }}
                   >
                     <div className={`${styles.shadow}`}></div>
-                    <Link to={x.to} style={{ fontSize: "1.1rem" }}>
-                      <div className={`${styles.text} text-light px-5 pt-5`}>
+                    <Link to={x.to}>
+                      <div className={`${styles.text} text-light px-3 pt-5`}>
                         <div>{x.details}</div>
                       </div>
                     </Link>
