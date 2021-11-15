@@ -82,7 +82,7 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
         transition: all 0.2s ease-in;
         @media screen and (max-width: 740px) {
           overflow: hidden;
-          height: 400px !important;
+          height: 320px !important;
         }
         @media screen and (max-width: 715px) {
           overflow: hidden;
@@ -146,7 +146,7 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
         height: 300px;
         width: 100%;
         text-align: center;
-        font-size: clamp(0.7rem, 2vw, 1.1rem);
+        font-size: clamp(0.7rem, 2.5vw, 1.1rem);
         transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
       }
       .label {
@@ -188,7 +188,7 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
           }
           .main {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: clamp(0.8rem,2vw,1.5rem);
           }
           .sub {
             transition-delay: 0.1s;

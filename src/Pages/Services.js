@@ -68,7 +68,7 @@ const Services = () => {
   return (
     <Fragment>
       <section
-        className="bg-light p-5 text-dark"
+        className="bg-light p-3 text-dark"
         style={{ fontFamily: "Lato" }}
       >
         <div className="py-5 ">
